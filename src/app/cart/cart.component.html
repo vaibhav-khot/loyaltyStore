@@ -1,0 +1,19 @@
+
+<h2>Cart</h2>
+<div *ngIf=cartItems>
+  <div class="container">
+    <div class="row" *ngFor="let item of cartItems">
+      <item-preview [item]="item"></item-preview>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      Total pay: {{cartService.getTotalPrice()}}
+    </div>
+  </div>
+  <div class="container" *ngIf="paymentOutput">
+    <div class="row">
+      {{paymentOutput}}
+    </div>
+  </div>
+</div>

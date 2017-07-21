@@ -1,0 +1,7 @@
+.row img{
+    width:120px;
+    height:120px;
+}
+.row b{
+    cursor:pointer;
+}

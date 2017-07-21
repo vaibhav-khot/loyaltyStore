@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row" *ngIf=details>
+        <div class="col-md-4"><img src={{details.image_src}}/></div>
+        <div class="col-md-4">
+          <input type="text" name="" [(value)]="details.name">
+          <!-- {{details.name}} -->
+          <br/>
+          <input type="text" name="" [(value)]="details.manufacturer">
+          <!-- {{details.manufacturer}} -->
+          <br/>
+          <input type="text" name="" [(value)]="details.price">
+          <!-- {{details.price}} -->
+          <br/></div>
+          <button (click)="editItem()">Edit</button>
+    </div>
+    <div class="row" *ngIf=!details>
+        <h3>Loading</h3>
+    </div>
+</div>

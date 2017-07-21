@@ -1,0 +1,12 @@
+<h2>Products</h2>Cart: {{cartService.getCart().length}}
+<div class="container" *ngIf=catalog>
+    <div class="row">
+        <div class="col-md-4">
+            Search:<br/>
+            <input type="text" [(ngModel)]="search"/>
+        </div>
+        <div class="col-md-8">
+            <item-preview *ngFor="let item of catalog | filterItems:search" [item]="item" [item]="delete"></item-preview>
+        </div>
+    </div>
+</div>
